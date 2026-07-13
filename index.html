@@ -1,0 +1,377 @@
+<html lang="ru">
+	<head>
+		<script src="https://mc.yandex.ru/metrika/tag_phono.js" type="text/javascript" charset="utf-8" async=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт писателя Jordan Rhea Readman. Книги, блог о путешествиях и творческие проекты.">
+    <title>Jordan Rhea Readman | Писатель</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+	
+    <!-- ШРИФТЫ: Playfair Display и Montserrat -->
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <!-- ТЕГИ ДЛЯ СОЦСЕТЕЙ (чтобы ссылка красиво выглядела в Дзене или мессенджерах) -->
+    <meta property="og:title" content="Jordan Rhea Readman | Писатель">
+    <meta property="og:description" content="Мир историй и книг Джордана Реи Ридмана.">
+    <meta property="og:type" content="website">
+    <!-- Сюда в будущем вставите прямую ссылку на фото обложки -->
+    <meta property="og:image" content="img/og-image.jpg"> 
+	</head>
+
+	<body>
+		<header class="main-header">
+			<nav class="main-navigation">
+
+				<div class="container">
+
+					<ul class="nav-left nav-list">
+						<li><a href="books.html">Книги</a></li>
+						<li><a href="about.html">Обо мне</a></li>
+						<li><a href="travel.html">Путешествия</a></li>
+					</ul>
+
+					<div class="logo">
+						ДЖОРДАН РЭЙ РИДМАН
+						<div class="logo-divider">
+							<div class="diamond-small"></div>
+						</div>
+						<span class="status">Пишу. Мечтаю. Путешествую.</span>
+					</div>
+
+					<ul class="nav-right nav-list">
+						<li><a href="process.html">Процесс</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+						<li>
+								<button class="theme-switch" onclick="toggleTheme()" type="button" aria-label="Переключить тему">
+										<span id="theme-icon">🌙</span> <!-- Текст убрали, осталась только иконка -->
+								</button>
+						</li>
+					</ul>
+
+				</div>
+
+			</nav>
+
+			<div class="mobile-menu-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+			</div>
+
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container">
+
+					<div class="hero-content">
+            <p class="subtitle">Миры, где свобода обретает крылья</p>
+            <h1>МОЯ ИСТОРИЯ НАЧИНАЕТСЯ ЗДЕСЬ</h1>
+            <div class="description">
+                <p>В каждой строке — частица живой души, в каждой главе — поиск истины. Это не просто книги, это приглашение разделить путь, полный искренних чувств и смелых мечтаний. Позвольте этой истории стать частью вашей собственной</p>
+            </div>
+            <a href="books.html" class="btn-primary">Открыть историю</a>
+        </div>
+					
+				</div>
+			</section>
+
+			<section class="bookshelf">
+				<div class="container">
+
+						<h2 class="section-header">Библиография</h2>
+						<p class="page-subtitle">Исследуйте грани воображения в драматической новелле «Мальчик, который искал крылья»<br> и приключенческом романе «На высоте ветров».<br> Погрузитесь в атмосферу поиска истины и истинной свободы.</p>
+
+						<div class="slider-wrapper">
+								<!-- Стрелка влево (исправлен SVG) -->
+								<button class="slider-arrow prev" aria-label="Назад">
+										<svg width="40" height="20" viewBox="0 0 40 20">
+												<line x1="40" y1="10" x2="0" y2="10" stroke="currentColor" stroke-width="1"></line>
+												<polyline points="7,3 0,10 7,17" fill="none" stroke="currentColor" stroke-width="1"></polyline>
+										</svg>
+								</button>
+								
+								<div class="books-grid">
+										<!-- Книга 1 -->
+										<div class="book-card">
+												<div class="book-cover sky-theme book-1">
+														<div class="book-overlay">
+																<span>Подробнее</span>
+														</div>
+												</div>
+												<div class="book-info">
+														<h3>Мальчик, который искал крылья</h3>
+														<p class="book-tagline">Трогательная история о мечте, ставшей выше неба</p>
+														<a href="book-1.html" class="read-more">Полистать страницы</a>
+												</div>
+										</div>
+
+										<!-- Книга 2 -->
+										<div class="book-card">
+												<div class="book-cover forest-theme book-2">
+														<div class="book-overlay">
+																<span>Подробнее</span>
+														</div>
+												</div>
+												<div class="book-info">
+														<h3>На высоте ветров</h3>
+														<p class="book-tagline">... Там, где скалы хранят глубину высохшего моря,<br> а сердце — вкус первого поцелуя</p>
+														<a href="book-2-na-visote-vetrov.html" class="read-more">Полистать страницы</a>
+												</div>
+										</div>
+								</div> <!-- Конец books-grid -->
+
+								<!-- Стрелка вправо (вынесена из сетки и исправлен SVG) -->
+								<button class="slider-arrow next" aria-label="Вперед">
+										<svg width="40" height="20" viewBox="0 0 40 20">
+												<line x1="0" y1="10" x2="40" y2="10" stroke="currentColor" stroke-width="1"></line>
+												<polyline points="33,3 40,10 33,17" fill="none" stroke="currentColor" stroke-width="1"></polyline>
+										</svg>
+								</button>
+						</div>
+
+						<a href="books.html" class="btn-primary">Заглянуть на полки</a>
+
+				</div>
+		</section>
+
+			<section class="quote-break">
+				<div class="container">
+
+					<div class="quote-overlay">
+            <p class="quote-text">«Иногда, чтобы найти путь к звездам, нужно сначала <br> позволить себе заблудиться в тумане». </p>
+        </div>
+
+				</div>
+			</section>
+
+			<section class="about-writing">
+				<div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span class="image-hint">Путешествия — это чернила,<br> которыми жизнь пишет свои лучшие главы</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h2 class="section-header">О творчестве</h2>
+                    <div class="about-text">
+                        <p class="quote">«Слова — это верный способ коснуться горизонта свободы».</p>
+                        <p>Меня зовут Джордан Рэй Ридман, и я верю, что у каждой истории есть свой запах, будь то соленый морской бриз или густая хвоя старого леса. Вдыхая их, мы невольно поднимаем глаза к небу, чувствуя непреодолимое желание сорваться в полет и оставить землю позади — ведь именно там, в небе, нашей душе хочется расправить плечи.</p>
+                        <p>Мои книги — это не просто текст, это приглашение в путь. Путь к поиску тех самых «крыльев», которые мы часто теряем в суете повседневности.</p>
+                        <p>Я пишу для тех, кто ищет ответы за пределами видимого горизонта. Добро пожаловать в мой мир.</p>
+                    </div>
+                    <div class="signature"><span>&#9825;</span> Джордан Рэй</div>
+                </div>
+            </div>
+        </div>
+			</section>
+
+			<section class="travel">
+				<!-- <div class="container"> -->
+
+					<div class="travel-preview travel-spread-section">
+
+						<h2 class="section-header">В поисках горизонтов</h2>
+						<div class="spread-container" id="spreadIndex">
+							<div class="spread-photo side-photo left-wing">
+									<div class="photo-wrapper">
+											<img src="img/stones2.jpg" alt="Карелия">
+											<span class="photo-caption-overlay">Шепот камней</span>
+									</div>
+							</div>
+
+							<div class="spread-photo main-photo">
+									<div class="photo-wrapper">
+											<img src="img/boat-img.jpg" alt="В поисках горизонтов вдохновения">
+											<span class="photo-caption-overlay main-cap">Точка вдохновения</span>
+									</div>
+							</div>
+
+							<div class="spread-photo side-photo right-wing">
+									<div class="photo-wrapper">
+											<img src="img/forest-river-img.jpg" alt="Карелия">
+											<span class="photo-caption-overlay">Ветер перевалов</span>
+									</div>
+							</div>
+						</div>
+
+						<div class="travel-content">
+							<p>Для меня путешествия — это не просто смена локаций, а способ собрать «краски» для будущих сюжетов. В тумане Уральских гор, обрамленных густыми лесами, и на ветрах северных перевалов рождаются те самые смыслы, которые позже становятся главами моих романов.</p>
+							<a href="travel.html" class="btn-secondary">Смотреть дневник дорог</a>
+						</div>
+
+					</div>
+
+				<!-- </div> -->
+			</section>
+
+			<section class="process">
+				<div class="container">
+
+            <h2 class="section-header">В процессе создания</h2>
+            
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-img moodboard"></div>
+                    <div class="process-info">
+                        <span class="process-date">29.03.2026</span>
+                        <h3>Мудборд новой главы</h3>
+                        <p>Собираю визуальные образы для финала «Свобода пахнет лесом». Вокруг лишь лес, озеро и тишина.</p>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-img draft"></div>
+                    <div class="process-info">
+                        <span class="process-date">28.04.2026</span>
+                        <h3>Черновики и мысли</h3>
+                        <p>Иногда герои начинают спорить с автором. превращаясь из теней воображения в живых людей, у которых на эту жизнь свои планы...</p>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-img workplace"></div>
+                    <div class="process-info">
+                        <span class="process-date">05.05.2026</span>
+                        <h3>Где рождаются смыслы</h3>
+                        <p>Говорят, чтобы поймать идею за хвост, нужно сначала соткать для неё уютное гнездо из красоты и предчувствий.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-footer">
+                <a href="#" class="btn-secondary">Смотреть зарисовки</a>
+            </div>
+
+        </div>
+			</section>
+
+			<section class="contacts-pro">
+				<div class="container">
+
+					<div class="contacts-grid-main">
+						<div class="contacts-info">
+								<h2 class="section-header">Всегда на связи</h2>
+								<p class="contacts-descr">Если вам захочется поделиться впечатлениями от прочитанного, обсудить героев или просто сказать несколько теплых слов — мой диалог всегда открыт.</p>
+								
+								<div class="accordion">
+										<!-- Пункт 1: Почта -->
+										<div class="accordion-item">
+												<button class="accordion-header">
+														<span>Написать письмо</span>
+														<span class="arrow"></span>
+												</button>
+												<div class="accordion-content">
+														<p>Для официальных запросов и просто писем: <br>
+														<a href="mailto:jordan-rhea@yandex.ru" class="contact-mail">jordan-rhea@yandex.ru</a></p>
+												</div>
+										</div>
+
+										<!-- Пункт 2: Соцсети -->
+										<div class="accordion-item">
+												<button class="accordion-header">
+														<span>Следить за творчеством</span>
+														<span class="arrow"></span>
+												</button>
+												<div class="accordion-content">
+														<div class="social-links-minimal">
+																<a href="#">Instagram</a>
+																<a href="#">Litres</a>
+														</div>
+												</div>
+										</div>
+
+										<!-- Пункт 3: Для издательств -->
+										<div class="accordion-item">
+												<button class="accordion-header">
+														<span>Сотрудничество</span>
+														<span class="arrow"></span>
+												</button>
+												<div class="accordion-content">
+														<p>По вопросам издания, переводов и авторских прав, пожалуйста, указывайте тему письма «Сотрудничество».</p>
+												</div>
+										</div>
+								</div>
+						</div>
+
+						<div class="contacts-visual">
+								<div class="contacts-image-frame">
+										<img src="./img/postcard.jpg" alt="Почта" class="contacts-img">
+								</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="main-footer">
+			<div class="container">
+
+				<div class="divider"><div class="diamond"></div></div>
+
+				<div class="footer-container">
+						<!-- Левая колонка: Авторское кредо -->
+						<div class="footer-column brand-col">
+								<div class="footer-logo">JORDAN RHEA READMAN</div>
+								<p class="footer-motto">Миры, где слова обретают вес, а мысли — крылья. Авторская проза о поиске внутренней свободы.</p>
+						</div>
+
+						<!-- Средняя колонка: Навигация -->
+						<div class="footer-column links-col">
+								<span class="footer-label">Навигация</span>
+								<ul class="footer-links">
+										<li><a href="index.html">Главная</a></li>
+										<li><a href="about.html">Об авторе</a></li>
+										<li><a href="books.html">Библиография</a></li>
+										<li><a href="travel.html">Путешествия</a></li>
+										<li><a href="process.html">Процесс творчества</a></li>
+										<li><a href="contacts.html">Контакты</a></li>
+								</ul>
+						</div>
+
+						<!-- Дополнительная колонка: Читателям -->
+						<div class="footer-column extra-col">
+								<span class="footer-label">Юридическая информация</span>
+								<ul class="footer-links">
+										<li><a href="#">Политика конфиденциальности</a></li>
+										<li><a href="#">Условия использования материалов</a></li>
+										<li><a href="#">Для издательств</a></li>
+								</ul>
+						</div>
+
+						<!-- Правая колонка: Почта и Соцсети -->
+						<div class="footer-column contacts-col">
+								<span class="footer-label">Связь</span>
+								<a href="mailto:jordan-rhea@yandex.ru" class="footer-email">jordan-rhea@yandex.ru</a>
+								<div class="footer-socials">
+										<a href="#">Instagram</a>
+										<a href="#">Litres</a>
+								</div>
+						</div>
+				</div>
+
+				<div class="footer-bottom">
+						<p>© 2026 Jordan Rhea Readman. Все права защищены. 
+							<br>Дизайн, тексты и изображения являются объектом авторского права.</p>
+				</div>
+
+			</div>
+		</footer>
+
+		<a href="#" class="back-to-top visible" id="backToTop">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+            <polyline points="15,12 10,7 5,12" fill="none" stroke="currentColor" stroke-width="1"></polyline>
+        </svg>
+        <span>Наверх</span>
+    </a>
+
+		<script src="js/script.js"></script>
+
+	</body>
+</html>

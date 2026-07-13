@@ -1,0 +1,253 @@
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>На высоте ветров | Jordan Rhea Readman</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/inner-book-style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+			<nav class="main-navigation">
+
+				<div class="container">
+
+					<ul class="nav-left nav-list">
+						<li><a href="books.html">Книги</a></li>
+						<li><a href="about.html">Обо мне</a></li>
+						<li><a href="travel.html">Путешествия</a></li>
+					</ul>
+
+					<div class="logo">
+						ДЖОРДАН РЭЙ РИДМАН
+						<span class="status">Пишу. Мечтаю. Путешествую.</span>
+					</div>
+
+					<ul class="nav-right nav-list">
+						<li><a href="process.html">Процесс</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+						<li>
+								<button class="theme-switch" onclick="toggleTheme()" type="button" aria-label="Переключить тему">
+										<span id="theme-icon">🌙</span> <!-- Текст убрали, осталась только иконка -->
+								</button>
+						</li>
+					</ul>
+
+				</div>
+
+			</nav>
+
+			<div class="mobile-menu-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+			</div>
+
+			<div class="container">
+				<div class="divider"><div class="diamond"></div></div>
+			</div>
+
+		</header>
+
+		<div class="container">
+			<div class="inner-book-container">
+
+        <div class="side-nav-container">
+            <div class="scroll-v-bar" id="v-progress"></div>
+            <div class="nav-diamonds">
+                <a href="#ch1" class="eb-diamond active" title="Глава 1"></a>
+                <a href="#ch2" class="eb-diamond" title="Глава 2"></a>
+                <a href="#ch3" class="eb-diamond" title="Глава 3"></a>
+                <a href=".footer-main" class="eb-diamond" title="Финал"></a>
+            </div>
+        </div>
+
+        <div class="book-layout">
+
+            <nav class="book-toc">
+                <!-- Кнопка-заголовок, которая будет работать на мобильных -->
+                <div class="toc-header-mobile" onclick="toggleToc()">
+                    <h3>Содержание</h3>
+                    <span class="toc-arrow"></span>
+                </div>
+
+                <!-- Контейнер, который будет скрываться/раскрываться -->
+                <div class="toc-body" id="tocBody">
+                    <ul class="chapter-list">
+                        <li><a class="chapter-num" href="#ch1">Глава 1: Перевал</a></li>
+                        <li><a class="chapter-num" href="#ch2">Глава 2: Оживление</a></li>
+                    </ul>
+                    
+                    <div class="toc-footer">
+                        <a href="#" class="btn-primary">Купить на Litres</a>
+                        <a href="#" class="btn-primary">Яндекс Книги</a>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="book-content">
+                <header class="book-main-header">
+                    <h1 class="book-title">На высоте ветров</h1>
+                    
+                    <!-- ОБЛОЖКА -->
+                    <div class="eb-media-container">
+                        <img src="./img/book-title-2.jpg" alt="Обложка" class="eb-media-item">
+                    </div>
+                </header>
+
+                <!-- !!!!!!!!!!!!!!!!!!!!Совет на будущее: Когда будете добавлять Главу 2, просто создайте новый <article class="eb-chapter-section" id="ch2"> 
+                    и не забудьте добавить новый ромбик в side-nav-container и новую ссылку в book-toc. !!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                <article class="book-chapter" id="ch1">
+                    <h2 class="chapter-title">Глава I <br>НЕСЛУЧАЙНАЯ ВСТРЕЧА</h2>
+                    <div class="logo-divider"><div class="diamond-small"></div></div>
+                    
+                    <p class="book-text">Cвет фар, пробивавшихся сквозь пелену дождя мутными жёлтыми конусами, 
+											медленно приближался, пока рядом с её фургончиком не замер внедорожник, покрытый приличным 
+											слоем рыжей грязи. Дверь распахнулась, и из машины выскочил парень. Он выглядел так, будто 
+											только что выиграл в лотерею, несмотря на ливень и размытую дорогу.</p>
+
+                    <!-- КАРТИНКА ВНУТРИ -->
+                    <figure class="eb-media-container">
+                        <img src="./img/na-visote-vetrov-img2.jpg" alt="Ник" class="eb-media-item">
+                    </figure>
+
+                    <p class="book-text">— Ух ты! — воскликнул он, закидывая голову и подставляя лицо каплям. 
+											— Куда же меня завела эта дорога! Просто восторг! Ты только посмотри на это место, оно же живое!</p> 
+                     
+											<!--  
+                    <div class="eb-media-container">
+                        <video autoplay loop muted playsinline class="eb-media-item">
+                            <source src="video/magic-moment.mp4" type="video/mp4">
+                        </video>
+                    </div> -->   
+                    <p class="book-text">Мики с застывшим удивлением невольно засмотрелась, как падающие из невидимой 
+											высоты капли дождя почти ласково скользят по его лицу, очерчивая скулы и бесследно растворяясь 
+											в складках одежды. Казалось, дождь любил его: он будто окутывал молодого человека своим невидимым 
+											мокрым плащом, заботливо ограждая от внешнего мира. А тот – стоял с распахнутыми в стороны руками, 
+											будто ждал объятий от самого неба. Его энергия казалась здесь почти неуместной — слишком шумной 
+											для тишины Пармы.</p>
+
+
+                </article>
+            </main>
+        </div>
+    
+     </div>
+		</div>
+
+		<footer class="main-footer">
+			<div class="container">
+
+				<div class="divider"><div class="diamond"></div></div>
+
+				<div class="footer-container">
+						<!-- Левая колонка: Авторское кредо -->
+						<div class="footer-column brand-col">
+								<div class="footer-logo">JORDAN RHEA READMAN</div>
+								<p class="footer-motto">Миры, где слова обретают вес, а мысли — крылья. Авторская проза о поиске внутренней свободы.</p>
+						</div>
+
+						<!-- Средняя колонка: Навигация -->
+						<div class="footer-column links-col">
+								<span class="footer-label">Навигация</span>
+								<ul class="footer-links">
+										<li><a href="index.html">Главная</a></li>
+										<li><a href="about.html">Об авторе</a></li>
+										<li><a href="books.html">Библиография</a></li>
+										<li><a href="travel.html">Путешествия</a></li>
+										<li><a href="process.html">Процесс творчества</a></li>
+										<li><a href="contacts.html">Контакты</a></li>
+								</ul>
+						</div>
+
+						<!-- Дополнительная колонка: Читателям -->
+						<div class="footer-column extra-col">
+								<span class="footer-label">Юридическая информация</span>
+								<ul class="footer-links">
+										<li><a href="#">Политика конфиденциальности</a></li>
+										<li><a href="#">Условия использования материалов</a></li>
+										<li><a href="#">Для издательств</a></li>
+								</ul>
+						</div>
+
+						<!-- Правая колонка: Почта и Соцсети -->
+						<div class="footer-column contacts-col">
+								<span class="footer-label">Связь</span>
+								<a href="mailto:jordan-rhea@yandex.ru" class="footer-email">jordan-rhea@yandex.ru</a>
+								<div class="footer-socials">
+										<a href="#">Instagram</a>
+										<a href="#">Litres</a>
+								</div>
+						</div>
+				</div>
+
+				<div class="footer-bottom">
+						<p>© 2026 Jordan Rhea Readman. Все права защищены. 
+							<br>Дизайн, тексты и изображения являются объектом авторского права.</p>
+				</div>
+
+			</div>
+		</footer>
+
+		<a href="#" class="back-to-top visible" id="backToTop">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+            <polyline points="15,12 10,7 5,12" fill="none" stroke="currentColor" stroke-width="1"></polyline>
+        </svg>
+        <span>Наверх</span>
+    </a>
+
+		<script src="js/script.js"></script>
+
+    <script>
+        // Скрипт для индикатора
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBar = document.getElementById('v-progress');
+            const diamonds = document.querySelectorAll('.eb-diamond');
+
+            const updateBookProgress = () => {
+                const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolledPercent = (winScroll / totalHeight) * 100;
+                
+                // 1. Двигаем полоску
+                if(progressBar) {
+                    progressBar.style.height = scrolledPercent + "%";
+                }
+
+                // 2. Окрашиваем ромбики
+                diamonds.forEach((diamond) => {
+                    // Получаем координаты ромбика относительно контейнера индикатора
+                    const diamondTop = diamond.offsetTop;
+                    const containerHeight = diamond.parentElement.offsetHeight;
+                    const diamondPercent = (diamondTop / containerHeight) * 100;
+
+                    // Если полоска прогресса дошла до ромбика или перешагнула его
+                    if (scrolledPercent >= diamondPercent - 1) { // -1 для небольшой погрешности
+                        diamond.classList.add('active');
+                    } else {
+                        diamond.classList.remove('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', updateBookProgress);
+            updateBookProgress(); // Запуск при загрузке
+        });
+    </script>
+
+    <script>
+        function toggleToc() {
+        const tocBody = document.getElementById('tocBody');
+        const tocHeader = document.querySelector('.toc-header-mobile');
+        
+        // Переключаем классы
+        tocBody.classList.toggle('is-open');
+        tocHeader.classList.toggle('is-active');
+    }
+    </script>
+
+</body>
+</html>

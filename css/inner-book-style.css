@@ -1,0 +1,306 @@
+/* 1. ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ */
+:root {
+    --bg-color: #f9f7f2;
+    --text-color: #4a4a4a;
+    --accent-color: #8c7e6d;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+.inner-book-container {
+    max-width: 1400px; /* Общий предел ширины для всей композиции */
+    margin: 0 auto;    /* Центрируем книгу на странице */
+    position: relative; /* Чтобы боковой индикатор позиционировался относительно этого контейнера */
+    background-color: var(--bg-color);
+}
+
+/* 2. ИНДИКАТОР ПРОГРЕССА */
+.side-nav-container {
+    position: fixed;
+    right: 35px;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgb(140 126 109 / 30%);
+    z-index: 3000;
+}
+.side-nav-container {
+    right: 20px;       /* Теперь это 20px от края .inner-book-container */
+    top: 200px;        /* Фиксированный отступ сверху */
+    height: 500px;     /* Фиксированная высота для предсказуемости */
+}
+@media (min-width: 1400px) {
+    .side-nav-container {
+        right: calc(50% - 700px + 20px); /* Магия: удерживает индикатор у края контента 1400px */
+    }
+}
+
+
+.scroll-v-bar {
+    width: 100%;
+    height: 0%;
+    background: var(--accent-color); /* Ваш основной коричневый/золотой */
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--accent-color); /* Свечение полоски */
+    transition: height 0.1s linear;
+    z-index: 1;
+}
+
+.nav-diamonds {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.eb-diamond {
+    width: 6px;
+    height: 6px;
+    background-color: var(--bg-color); /* Пустой ромбик под цвет бумаги */
+    border: 1px solid var(--accent-color);
+    transform: rotate(45deg);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 5; /* Чтобы ромбик был поверх полоски */
+    margin-left: -2.5px;
+}
+
+/* Эффект при наведении */
+.eb-diamond:hover {
+    background-color: var(--accent-color);
+    transform: rotate(45deg) scale(1.3);
+}
+
+/* Активный ромбик (когда мы на этой главе) */
+.eb-diamond.active {
+    background-color: var(--accent-color) !important;
+    box-shadow: 0 0 10px var(--accent-color);
+    transform: rotate(45deg) scale(1.1); /* Легкое увеличение для акцента */
+}
+
+/* Скрываем на мобильных, так как там есть индикатор вверху или просто не хватает места */
+@media (max-width: 1024px) {
+    .side-nav-container {
+        display: none;
+    }
+}
+
+
+
+
+/* 3. МАКЕТ КНИГИ */
+.book-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 40px;
+    background-color: var(--bg-color);
+}
+
+.book-toc {
+    flex: 0 0 250px;
+    position: sticky;
+    top: 20px;
+    max-height: max-content;
+    overflow-y: auto;
+    font-family: var(--font-sans);
+}
+
+.book-toc h3 {
+    font-family: var(--font-serif);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.chapter-list {
+    list-style: none;
+    margin: 20px 0 0 10px;
+    padding: 0;
+}
+
+.chapter-num {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.chapter-num:hover { text-decoration: underline; }
+
+.book-content {
+    flex: 1;
+    max-width: 750px; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* 4. ТИПОГРАФИКА */
+.book-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.chapter-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.book-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.book-text:first-of-type::first-letter {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+/* 5. МЕДИА (Изолированные) */
+.eb-media-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 2.5rem auto;
+    display: block;
+}
+
+.eb-media-item {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+figcaption {
+    margin-top: 12px;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+/* 6. КНОПКИ В САЙДБАРЕ */
+.toc-footer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px;
+}
+
+.toc-footer .btn-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 7. ЛОГИКА СВЕРТЫВАНИЯ (ДЕСКТОП) */
+.toc-header-mobile {
+    display: block;
+    text-align: center;
+}
+
+.toc-arrow { display: none; }
+
+@media (min-width: 769px) {
+    .toc-body { display: block !important; }
+    .toc-header-mobile { pointer-events: none; }
+}
+
+/* 8. АДАПТИВНОСТЬ (МОБИЛЬНЫЕ 768px и ниже) */
+@media (max-width: 768px) {
+    .book-layout { 
+        flex-direction: column; 
+        padding: 10px 20px; 
+        gap: 0 !important; /* Убираем дыру под содержанием */
+    }
+
+    .book-toc { 
+        position: relative; 
+        width: 100%; 
+        top: 0;
+        margin-bottom: 15px !important; /* Прижимаем к названию книги */
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(140, 126, 109, 0.2);
+    }
+
+    /* Стрелочка мобильного меню */
+    .toc-header-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .toc-arrow {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid var(--accent-color);
+        border-bottom: 2px solid var(--accent-color);
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+
+    .toc-body { display: none; padding-top: 20px; }
+    .toc-body.is-open { display: block; }
+    .is-active .toc-arrow { transform: rotate(-135deg); }
+
+    /* Начинка книги на мобильных */
+    .book-main-header { margin-top: 0; margin-bottom: 20px; }
+
+    .book-title { 
+        font-size: 1.8rem; 
+        margin-top: 10px; 
+        margin-bottom: 15px; 
+    }
+
+    .eb-media-container { margin: 1.5rem 0; }
+    .eb-media-item { border-radius: 4px; }
+}
+
+
+/*------------------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+    .inner-book-container {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden; /* Защита от горизонтального скролла */
+    }
+    
+    .book-layout {
+        padding: 10px;
+        gap: 0;
+    }
+}
+/*------------------------------------------------------------------------------------*/
