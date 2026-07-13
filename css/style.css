@@ -1639,6 +1639,10 @@ ul, li {
     .quote-text { font-size: 18px; }
     .book-cover { height: 400px; }
     .contacts-image-frame { height: 350px; }
+
+		.hero {
+			background-attachment: local;
+		}
 }
 
 
